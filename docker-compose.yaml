@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+   api:
+    image: my-ml-api:1.0
+    build: .
+    ports:
+      - '8000:8000'
+    volumes:
+      - ./models/model050826_2.pkl:/ml_api/models
